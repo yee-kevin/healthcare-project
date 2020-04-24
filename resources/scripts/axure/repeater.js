@@ -1416,7 +1416,7 @@ $axure.internal(function($ax) {
         $ax.adaptive.removeNiceScroll(stateQuery, blockResetScroll);
         
         //check if the page is in mobile mode
-        if (!$ax.adaptive.isDeviceMode()) {
+        if(!$ax.adaptive.isDeviceMode() || MOBILE_DEVICE) {
             stateQuery.css('cursor', '');
             return false;
         }
